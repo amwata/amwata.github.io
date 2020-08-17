@@ -1,0 +1,213 @@
+
+
+*{
+	margin:0;
+	padding:0;
+	list-style:none;
+	text-decoration:none;
+	}
+	body{
+	margin:0;
+	padding:0;
+	justify-content:cente;
+	align-items:center;
+	background:#def;
+	display:block;
+	}
+	.container{
+	width:100%;
+	height:100%;
+	display:flex;
+	flex-direction:column;
+	justify-content:;
+	align-items:center;
+	}
+/*	.title{
+	margin:3.0em 0;
+	}
+	.title .hr{
+	height:2px;
+	width:20px;
+    background:rgba(102,107,135);
+    border-radius:20px;
+    display:block;
+   
+	}
+	.title h2{
+	padding:10px;
+	font-weight:450;
+	font-size:1.5em;
+	color:rgba(92,97,125);
+	}*/
+	.box{
+	width:330px;
+	height:300px;
+	margin-bottom:2em;
+	padding:0;
+	box-sizing:border-box;
+	background:rgba(92,97,125);
+	align-items:center;
+	justify-content:center;
+	display:block;
+	opacity:0;
+	transition:.5s ease-out;
+	}
+	.slideB{
+	opacity:1;
+	transition:.5s ease-out;
+	animation:box .9s ease-out;
+	}
+	@keyframes box{
+	    0%{transform:translateY(20px) scale(.9);}
+	    50%{transform:translateY(-10px) ;}
+		100%{transform:translateY(0px);}
+	}
+	.imgbx{
+		height:70%;
+		margin:5px;
+		position:relative;
+		display:block;
+		object-fit:cover;
+		overflow:hidden;
+	}
+	.imgbx:before{
+		content:"";
+		position:absolute;
+		width:100%;
+		height:100%;
+		background:linear-gradient(90deg,rgba(0,49,82,.7),rgba(0,45,48,.3));
+		border-radius:0 0 50%/100% 0;
+		bottom:20%;
+	}
+	.imgbx:after{
+	content:"";
+	position:absolute;
+	width:100%;
+	height:100%;
+	left:0;
+	background:linear-gradient(90deg,rgba(0,45,48,.3),rgba(0,59,83,.7));
+	border-radius:50%/100% 0 0;
+	}
+	.box .brick{
+	background:url(../imgs/brick.png) no-repeat;
+	background-size:cover;
+	background-position:bottom;
+	}
+	.box .frwk{
+		background:url(../imgs/frwk2.png) no-repeat;
+		background-size:cover;
+		background-position:bottom;
+	}
+	.box .trails{
+		background:url(../imgs/trail.png) no-repeat;
+		background-size:cover;
+		background-position:bottom;
+	}
+	.box .desmos{
+		background:url(../imgs/desmos.png) no-repeat;
+		background-size:cover;
+		background-position:bottom;
+	}
+	.box .matrix{
+		background:url(../imgs/matrix.png) no-repeat;
+		background-size:cover;
+		background-position:bottom;
+	}
+	.box .block{
+		background:url(../imgs/block.png) no-repeat;
+		background-size:cover;
+		background-position:bottom;
+	}
+	.box .colr{
+		background:url(../imgs/colr.png) no-repeat;
+		background-size:cover;
+		background-position:bottom;
+	}
+	.box .potfo{
+	background:url(../imgs/bg1.png) no-repeat;
+	background-size:cover;
+	background-position:bottom;
+	}
+	
+     .head{
+	position:absolute;
+	margin:20px;
+	opacity:0;
+    transition:.3s .25s ease-out;
+	}
+	.slideB .head{
+	    z-index:5;
+	    opacity:1;
+	    transition:.3s .25s ease-out;
+	    animation:head .8s ease-out;
+	    }
+	@keyframes head{
+	
+	0%,50%{transform:translateY(2em);
+			opacity:0;}
+	    100%{transform:translateY(0);}
+	}
+	.head h4{
+		padding:5px;
+		color:#def;
+		font-weight:700;
+		font-size:1.5em;
+		background:linear-gradient(rgb(81,102,126) 30%,rgb(188,195,205),rgb(81,102,126) 70% 100%);
+		color:transparent;
+		-webkit-background-clip:text;
+		background-clip:text;
+		
+	}
+	.head h4:before {
+		content:attr(data-text);
+		position:absolute;
+		text-shadow:1px 1px 5px #000;
+		z-index:-1;
+	}
+	.head p{
+		padding:0 5px;
+		color:#abc;
+		font-weight:400;
+		text-shadow:1px 1px 3px #000;
+		font-size:1em;
+		font-family:'Baloo Da 2',Arial;
+	}
+	.btn{
+	min-height:25%;
+	position:relative;
+	box-sizing:border-box;
+	align-self:flex-end;
+	}
+	.btn ul {
+	padding:10px;
+	justify-content:space-between;
+	align-items:center;
+	display:flex;
+	}
+	.btn ul li{
+	 align-items:center;
+	 justify-content:center;
+	}
+	.btn ul li a{
+	margin:5px;
+	padding:10px;
+	cursor:default;
+	text-align:center;
+	color:#def;
+	font-weight:400;
+	font-size:1em;
+	background:rgb(31,142,156);
+	border-radius:5px;
+	display:block;
+	}
+   .btn ul li a:hover, .btn ul li a:active{
+    color:#def;
+    background:rgb(11,121,136);
+	}
+	
+	@media screen and (orientation: landscape ), (min-width : 768px){
+	.box {
+	flex-wrap: wrap;
+	flex-direction:row;
+	}
+}
