@@ -2,7 +2,7 @@
 @font-face
  {
  	font-family:nasalization;
- 	src:url(../font/nasalization.ttf);
+ 	src:url(nasalization.ttf);
  }
 *{
     margin:0;
@@ -363,7 +363,7 @@ transform:rotate(180deg);
 	width:100%;
 	height:100%;
 	display:block;
-    background:url("../imgs/bgd.png") no-repeat;
+    background:url("bgd.png") no-repeat;
     background-position:0 40px;
     background-size:100%;
     object-fit:cover;
@@ -393,7 +393,7 @@ transform:rotate(180deg);
     display:block;
     width:100%;
     height:100%;
-    background:url("../imgs/img2.png") no-repeat;
+    background:url("img2.png") no-repeat;
     background-size:100%;
     object-fit:cover;
  }
@@ -427,7 +427,7 @@ transform:rotate(180deg);
 	height:3em;
 	display:block;
 	align-items:center;
-	background:url("../imgs/sign.png") no-repeat;
+	background:url("sign.png") no-repeat;
 	background-size:100%;
 	opacity:.6;
 	object-fit:cover;
