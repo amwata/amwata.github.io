@@ -10,7 +10,7 @@ const init=()=>{
     sec = document.querySelector(".imgsec")
 	slides = document.querySelector(".slides")
     imgBox = document.querySelector("#img")
-    dir = "../imgs/"
+    dir = "/"
     iter = 1
 	
 }
