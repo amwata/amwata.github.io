@@ -7,7 +7,7 @@ let isInView,anim
      	let raf = requestAnimationFrame || function(cb){setTimeout(cb,1000/60)}
      	function animate(){
      	boxes.forEach(b =>{
-     	if(isInView(b,10)){
+     	if(isInView(b,20)){
      		b.classList.add("slideB")
      	   }else{b.classList.remove("slideB")}
    		})
