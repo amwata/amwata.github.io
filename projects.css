@@ -89,42 +89,42 @@
 	border-radius:50%/100% 0 0;
 	}
 	.box .brick{
-	background:url(../imgs/brick.png) no-repeat;
+	background:url(brick.png) no-repeat;
 	background-size:cover;
 	background-position:bottom;
 	}
 	.box .frwk{
-		background:url(../imgs/frwk2.png) no-repeat;
+		background:url(frwk2.png) no-repeat;
 		background-size:cover;
 		background-position:bottom;
 	}
 	.box .trails{
-		background:url(../imgs/trail.png) no-repeat;
+		background:url(trail.png) no-repeat;
 		background-size:cover;
 		background-position:bottom;
 	}
 	.box .desmos{
-		background:url(../imgs/desmos.png) no-repeat;
+		background:url(desmos.png) no-repeat;
 		background-size:cover;
 		background-position:bottom;
 	}
 	.box .matrix{
-		background:url(../imgs/matrix.png) no-repeat;
+		background:url(matrix.png) no-repeat;
 		background-size:cover;
 		background-position:bottom;
 	}
 	.box .block{
-		background:url(../imgs/block.png) no-repeat;
+		background:url(block.png) no-repeat;
 		background-size:cover;
 		background-position:bottom;
 	}
 	.box .colr{
-		background:url(../imgs/colr.png) no-repeat;
+		background:url(colr.png) no-repeat;
 		background-size:cover;
 		background-position:bottom;
 	}
 	.box .potfo{
-	background:url(../imgs/bg1.png) no-repeat;
+	background:url(bg1.png) no-repeat;
 	background-size:cover;
 	background-position:bottom;
 	}
