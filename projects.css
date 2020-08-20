@@ -133,12 +133,12 @@
 	position:absolute;
 	margin:20px;
 	opacity:0;
-    transition:.3s .25s ease-out;
+    transition:.3s ease-out;
 	}
 	.slideB .head{
 	    z-index:5;
 	    opacity:1;
-	    transition:.3s .25s ease-out;
+	    transition:.3s ease-out;
 	    animation:head .8s ease-out;
 	    }
 	@keyframes head{
