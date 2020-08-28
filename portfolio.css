@@ -4,6 +4,9 @@
  	font-family:nasalization;
  	src:url(nasalization.ttf);
  }
+html {
+background:#713;
+}
 *{
     margin:0;
     padding:0;
@@ -17,6 +20,7 @@
 }
 body {
 max-height:100vh;
+background:#713;
 }
 .noscroll{
     height:100%;
