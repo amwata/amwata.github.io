@@ -21,9 +21,9 @@ let isInView,anim
   
   	return (elemTop >= -overhang) && (elemBottom <= window.innerHeight + overhang)
   }
- 	animate()
+ 	//animate()
    // raf(slidetxb)
  //	raf(animate)
  	init()
- 	//anima()
+ 	anima()
  }
