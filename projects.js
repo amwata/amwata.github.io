@@ -25,5 +25,5 @@ let isInView,anim
    // raf(slidetxb)
  //	raf(animate)
  	init()
- 	anima()
+ 	//anima()
  }
