@@ -1,5 +1,4 @@
-<a href="https://amwata.com/amwata.github.io/blob/master/LICENSE"><img alt="GitHub license" src="https://img.shields.io/github/license/amwata/amwata.github.io"></a>
-
+<a href="https://github.com/amwata/amwata.github.io/blob/master/LICENSE"><img alt="GitHub license" src="https://img.shields.io/github/license/amwata/amwata.github.io"></a>
 
 
 # amwata.github.io
