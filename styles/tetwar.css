@@ -11,7 +11,7 @@ body{
  	align-items:center;
  	background:#323237;
  	width:100vw;
- 	min-height:100vh;
+        height:100vh;
 }
 
 .ortn{
