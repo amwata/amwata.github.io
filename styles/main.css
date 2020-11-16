@@ -837,7 +837,7 @@ footer .foot .ftinfo .ftctc .fticons{
 	color:var(--txtcol);
 	font-weight:900;
 	font-size:1.6rem;
-	background:var(--prjctshdcol) !important;
+	background:var(--prjctshdcol);
 	color:transparent;
 	-webkit-background-clip:text;
 	background-clip:text;
