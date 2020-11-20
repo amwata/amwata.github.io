@@ -54,6 +54,7 @@
 	header .hdview nav{
 		display:none;
 	}
+	
 	.mobile{
 		position:fixed;
 		display:flex;
@@ -61,28 +62,31 @@
 		top:0;
 		left:0;
 		height:100vh;
-		transform:translateX(-100%);
-		transition:transform .5s ease;
+		transition:all .7s ease;
+		visibility:hidden;
 		z-index:110;
-		animation:rgt .7s ease;
 	}
-	@keyframes rgt{
-		0%{transform:translateX(0);}
-		50%{transform:translateX(5%);}
-		100%{transform:translateX(-100%);}
-	}
+	
 	.mobile .hdmn{
 		position:absolute;
 		flex-direction:column;
 		top:3rem;
-		left:0;
-		width:70%;
+		width:75%;
+		transform:translateX(-100%);
 		display:flex;
 		height:calc(100% - 3rem);
 		overflow-y:auto;
-		background:var(--ctnbg);
+		background:var(--mobnavbg);
 		justify-content:flex-start;
+		transition:transform 0.5s ease;
+		animation:rgt .5s ease;
 		z-index:1;
+	}
+	
+	@keyframes rgt{
+		0%{transform:translateX(0);}
+		50%{transform:translateX(5%);}
+		100%{transform:translateX(-100%);}
 	}
 	
 	.mobile .hdmn li{
@@ -116,6 +120,10 @@
 		transform:scaleX(0);
 	}
 	.activea{
+		visibility:visible;
+		background:var(--glmdlbg);
+	}
+	.activea .hdmn{
 		transform:translateX(0);
 		transition:transform .5s ease;
 		animation:lft .7s ease;
@@ -125,17 +133,7 @@
 		50%{transform:translateX(5%);}
 		100%{transform:translateX(0);}
 	}
-	.blur:before{
-		content:"";
-		position:absolute;
-		top:0;
-		width:100%;
-		height:100%;
-		background:var(--glmdlbg);
-		transition:background .7s ease;
-		overflow-y:auto;
-		z-index:110;
-	}
+
 	#contact .contact{
 		flex-direction:column;
 	}
