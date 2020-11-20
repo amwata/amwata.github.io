@@ -137,17 +137,10 @@ header .hdview .dsktop .hdmn li a, .li a{
     background:var(--bghv);
 }
 
-.blur{
-	position:relative;
-	width:100%;
-	height:100%;
-    transition:background .7s ease;
-}
 .hdslide{
     position:absolute;
     pointer-events:none;
     background:var(--navln);
-    border-radius:3px;
     z-index:-1;
     transition:.7s ease;
 }
