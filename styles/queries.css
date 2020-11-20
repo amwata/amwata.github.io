@@ -72,6 +72,7 @@
 		position:absolute;
 		flex-direction:column;
 		top:3rem;
+                left:0;
 		width:75%;
 		transform:translateX(-100%);
 		display:flex;
