@@ -428,6 +428,8 @@ p{
     line-height:3rem;
     text-align:center;
     font-weight:bold;
+    cursor:pointer;
+    user-select:none;
     letter-spacing:3px;
 }
 .skills span:before{
