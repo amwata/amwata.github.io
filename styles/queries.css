@@ -45,6 +45,9 @@
 		border-radius:10px;
 		transition:.5s ease;
 	}
+        .skills span{
+                cursor:default;
+         }
 	.hdview .hdclose .mnb2{
 		width:70%;
 	}
