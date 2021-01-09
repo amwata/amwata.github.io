@@ -702,11 +702,15 @@ footer .foot .ftinfo .ftctc .fticons{
 	justify-content:space-around;
 }
 .ftmenu ul li, .ftctc ul li{
-    text-align :center;
+    text-align :left;
     font-size:.85rem;
     font-weight:550;
     color:var(--txtcol2);
 }
+.ftctc ul li{
+    text-align :right;
+}
+
 .foot .ftinfo .ftmenu ul li a, .foot .ftinfo .ftctc ul li a{
     font-size:.8rem;
     font-weight:550;
