@@ -2,6 +2,6 @@
 
 # web portfolio
 
-<img alt="profile" src="https://github.com/amwata/amwata.github.io/blob/master/imgs/template.png">
+<img alt="profile" src="https://github.com/amwata/amwata.github.io/blob/master/imgs/sigma.png">
 
 # https://amwata.github.io
