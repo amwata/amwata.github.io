@@ -285,8 +285,8 @@ background-position:100px 0;
 	transform:translateX(0);
 }
 .hmdiv .hmp a:hover, .hmdiv .hmp a:active{
-	border:1px solid var(--btnhv);
-	background:var(--btnhv);
+	border:1px solid var(--primcol1);
+	background:var(--primcol1);
 }
 .blur .mobile .hdmn li a{
 	opacity:1;
