@@ -1,16 +1,15 @@
-
 "use strict"
 
 window.onload = () =>{
 "use strict"
 	const{random:rand,round:rnd,floor} = Math,
 		loader = document.querySelector(".loader"),
-		 phrases =[["For the Time ","I spent on","Tegmark's Life 3.0","I learnt that","Systems can be","Improved to better","Handle Uncertainty"],
+		phrases =[["For the Time ","I spent on","Tegmark's Life 3.0","I learnt that","Systems can be","Improved to better","Handle Uncertainty"],
 			   	  ["We can sometimes","wake up to","the solution of","debugging a code","that our subconscious","has been working on"],
 			      ["Fully Understanding","The Concepts of","Physics can be","Extremely Challenging","and perhaps","unnecessary except","to illustrate the","idea of Universality"],
 				  ["Being a Theoretical"," Physicist You think","to really understand","something only to","find that you don't","know crap about it"]],
 
-	imgs = ["img1.png","img3.png","img4.png","img6.png"],
+	imgs = ["img5.png","img6.png","img4.png","img3.png"],
 	glpBg = ["glpbx1", "glpbx2","glpbx3","glpbx4"],
 	
     hdClose = document.querySelector(".hdclose"),
@@ -18,7 +17,6 @@ window.onload = () =>{
 	hdMn = document.querySelector(".hdmn"),
 	hdMark = document.querySelector(".dsktop .hdmn .hdslide"),
 	mobMark = document.querySelector(".mobile .hdmn .hdslide"),
-	mobMrk = document.querySelector(".mobslide"),
 	sec = document.querySelector("#home"),
 	hdlinks = document.querySelectorAll(".dsktop .hdmn .li a"),
 	mobLinks = document.querySelectorAll(".mobile .hdmn .li a"),
@@ -36,14 +34,13 @@ window.onload = () =>{
 	hmview = document.querySelector(".hmdiv"),
     glView = document.querySelector(".glview"),
 	glMdl = document.querySelector(".glmdl"),
-	glimgPop = document.querySelector(".glimgpop"),
+	glimgPop = document.querySelector(".glimgpop img"),
 	glCtns = document.querySelectorAll(".glctn"),
-	glimgBxs = document.querySelectorAll(".glimgbx"),
+	glimgBxs = document.querySelectorAll(".glimgbx img"),
 	glpBx = document.querySelectorAll(".glpbx"),
 	glClose = document.querySelector(".glclose"),
-	ctcSbj = document.querySelector("#ctcsbj"),
-	ctcMsg = document.querySelector("#ctcmsg"),
-	ctcMail = document.querySelector("#ctcmail")
+	skills = document.querySelector("#skills"),
+	svc = document.querySelector("#services")
 	
 	const endLoad = () => {
 		loader.style.display = "none"
@@ -57,7 +54,6 @@ window.onload = () =>{
 	}
 	
 	const events = () => {
-		
 		hdClose.addEventListener("click",(e)=>{
 			hdClose.classList.toggle("active")
 			mobNav.classList.toggle("activea")
@@ -69,17 +65,22 @@ window.onload = () =>{
 		
 		mobLinks.forEach(li =>{
 			li.addEventListener("click",(e)=>{
-				const offsetTop = document.querySelector(e.target.getAttribute("href")).offsetTop
+				const el = document.querySelector(e.target.getAttribute("href"))
+			 	let offTop
+			 	if(el == svc || el == skills){
+			 		offTop = el.offsetParent.offsetTop + el.offsetTop
+			 	}else offTop = el.offsetTop
+			 	
 				e.preventDefault()
 				mobMarker(li)
 				addScroll()
 				glMdl.classList.remove("glmdlv")
-				if(offsetTop != null){
+				if(offTop != null){
 					hdClose.classList.remove("active")
 					mobNav.classList.remove("activea")
 					document.body.classList.remove("blur")
 					setTimeout(()=>{ 
-					window.scrollTo({ top: offsetTop, behavior: "smooth" })
+						window.scrollTo({ top: offTop, behavior: "smooth" })
 					},700)
 				}
 		
@@ -88,11 +89,16 @@ window.onload = () =>{
 		
 		hdlinks.forEach(li =>{
 			li.addEventListener("click",(e)=>{
+				const el = document.querySelector(e.target.getAttribute("href"))
+				let offsetTop
+				if(el == svc || el == skills){
+					offsetTop = el.offsetParent.offsetTop
+				}else offsetTop = el.offsetTop
+				
 				e.preventDefault()
 				hdMarker(li)
 				addScroll()
 				glMdl.classList.remove("glmdlv")
-				const offsetTop = document.querySelector(e.target.getAttribute("href")).offsetTop
 				if(offsetTop != null){
 					hdClose.classList.remove("active")
 					mobNav.classList.remove("activea")
@@ -121,7 +127,7 @@ window.onload = () =>{
 			i.addEventListener("click",()=>{
 			removeScroll()
 			glMdl.classList.add("glmdlv")
-			Object.assign(glimgPop.style,{background: `${i.style.background} no-repeat`, backgroundSize:"100%", backgroundPosition:"50%"})
+			glimgPop.src = `${i.src}`
 			})
 		})
 	
@@ -144,12 +150,38 @@ window.onload = () =>{
 			}
 		})
 		
-		ctcMail.addEventListener("click",()=>{
-			let sb = ctcSbj.value
-			let ms = ctcMsg.value
-			linkMail(ctcMail, sb, ms, "saseda0@gmail.com", "akechsamwel@students.ku.ac.ke")
+		const scriptURL = "https://docs.google.com/forms/u/0/d/e/1FAIpQLSfrFplE8qis-Sw90gyu83OyczcnRwmuTK9pFn0WO3YaF01NdA/formResponse"
+		const form = document.forms['submit-sigmoid-response'],
+		alrt = document.querySelector(".smtlrt")
+		
+		const hidEl = (el, cl) => {
+			setTimeout(() => {
+				el.classList.remove(cl)
+			}, 3000)
+		}
+		
+		form.addEventListener('submit', e => {
+			e.preventDefault()
+			alrt.innerHTML = `<p>Sending message...</p>`
+			alrt.classList.add("alrtop")
+			if (navigator.onLine) {
+				fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+				.then(response => console.log('Success!', response)).then(() => new Promise((resolve) => setTimeout(resolve, 3000)).then(() => {
+					alrt.innerHTML = `<span class="sc"></span><p>Message sent</p>`
+					hidEl(alrt, "alrtop")
+					form.reset()
+				}))
+				.catch((e) => {
+					alrt.innerHTML = `<span class="er"></span><p>Try Again</p>`
+					hidEl(alrt, "alrtop")
+				})
+			} else { 
+				alrt.innerHTML = `<span class="er"></span><p>Connection error</p>`
+				hidEl(alrt, "alrtop")
+			}
 		})
 	}
+	
 	const hdMarker = (e) =>{
 		hdMark.style.top = `${e.offsetTop}px`
 		hdMark.style.left = `${e.offsetLeft}px`
@@ -186,14 +218,14 @@ window.onload = () =>{
 		}
 		
 		views.forEach(view=>{
-			if(isInView(view, 30)){
+			if(isInView(view, 20)){
 				view.classList.add("toview")
 			}else{view.classList.remove("toview")}
  		})
  		if(isInView(hmview, 50, false)){
  			hmview.classList.add("toview")
  		}else{hmview.classList.remove("toview")}
- 		if(isInView(sklsView, 30, false)){
+ 		if(isInView(sklsView, 30)){
  			sklsView.classList.add("progactive")
  		}else{sklsView.classList.remove("progactive")}
  		raf(slidView)
@@ -210,13 +242,13 @@ window.onload = () =>{
  
 	const randglBg = () =>{
 		let path = "imgs/"
-		for(let i = glCtns.length-1;i>=0;i--){
+		for(let i = glCtns.length-1; i >= 0; i--){
  			const t = floor(rand()*i)
 			arrSwap(i, t, imgs)
-   			Object.assign(glimgBxs[i].style,{background:`url(${path + imgs[i]}) no-repeat` , backgroundSize:"cover"})
+   			glimgBxs[i].src = `${path + imgs[i]}`
 	
 			arrSwap(i, t, glpBg)
-			if(glpBx[i].classList.length  <=1){
+			if(glpBx[i].classList.length <= 1){
 				glpBx[i].classList.add(glpBg[i])
 			}
 		}
@@ -270,15 +302,12 @@ window.onload = () =>{
 	
 	let tecSkills =(id)=>{
 		let skills = new Map()
-			skills.set("React", 85)
-			skills.set("JavaScript", 90)
-			skills.set("Git", 70)
-			skills.set("HTML & CSS", 85)
-			skills.set("TensorFlow", 55)
-			skills.set("SQL", 75)
 			skills.set("NodeJs", 70)
+			skills.set("JavaScript", 90)
+			skills.set("Core Python", 85)
+			skills.set("HTML & CSS", 85)
+			skills.set("SQL", 75)
 			skills.set("WordPress", 75)
-			skills.set("UI/UX", 75)
 	
 		for (let [k, v]of skills){
 				createEl(id, k, v)
@@ -301,13 +330,6 @@ window.onload = () =>{
 		    	document.body.classList.add("noscroll")
 		    }
 		}
-	const linkMail = (id,sbj,msg,...adrs) => {
-		let co = adrs[0]
-		let cc = adrs.splice(1).join()
-		let sbjCoded = encodeURIComponent(sbj)
-		let msgCoded = encodeURIComponent(msg)
-		id.href = `mailto:${co}?cc=${cc}&subject=${sbjCoded}&body=${msgCoded}`
-	}
 	
 	let perSkills = (id) =>{
 		let skills = new Map()
@@ -322,12 +344,11 @@ window.onload = () =>{
 		}
 		skills.clear()
 	}
-	setTimeout(() =>{
-		endLoad()
-		tecSkills(ctnTec)
-		perSkills(ctnPer)
-   	 	slidView()
-		randglBg()
-		createPhrase()
-		events()},2000)
+	endLoad()
+	tecSkills(ctnTec)
+	perSkills(ctnPer)
+   	slidView()
+	randglBg()
+	createPhrase()
+	events()
 }
