@@ -14,7 +14,7 @@
     display:flex;
     align-items:center;
     justify-content:center;
-    background:var(--dkcol);
+    background:#000;
     z-index:1000;
 }
 .frame{
