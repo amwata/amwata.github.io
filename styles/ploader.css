@@ -11,35 +11,65 @@
     left:0;
     width:100%;
     height:100%;
-    background:#000;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    background:var(--dkcol);
     z-index:1000;
-    transition:none;
 }
-.loader div{
-	position:absolute;
-	top:50%;
-	left:50%;
-	transform:translate(-50%,-50%);
-	overflow:hidden;
+.frame{
+	position:relative;
+	width:200px;
+	height:200px;
+	display:flex;
+	align-items:center;
+	justify-content:center;
+	-webkit-box-reflect:below -150px linear-gradient(0deg, rgba(0, 0, 0, .3), rgba(0, 0, 0, 0));
 }
-.loader div h1{
-    width:10rem;
-    height:7rem;
-    font-weight:400;
-    font-size:5rem;
-    text-align:center;
-    line-height:5rem;
-    font-family:ns;
-    background:linear-gradient(-60deg, transparent 0%, transparent 30%, #65493d 45%, #deb577 55%, transparent 70%, transparent 100%) no-repeat;
-    background-position:-100px;
-    background-sgize:50%;
-    -webkit-text-fill-color:transparent;
-    -webkit-background-clip:text;
-    animation:rotate 2s .5s ease infinite ;
+.bctn{
+	width:70%;
+	height:100px;
+	border-top:3px solid #666;
+	display:flex;
+	align-items:flex-end;
+	justify-content:center;
 }
+.bctn .p{
+	position:relative;
+	width:20px;
+	height:100%;
+	transform-origin:top;
+}
+	.p1{animation:tap .8s ease-out infinite;}
+	.p5{animation:tip .8s ease-out infinite reverse;}
 
-@keyframes rotate 
-{
-     0%{background-position:-100px;}
-     100%{background-position:100px;}
+.bctn .p:before{
+	content:"";
+	position:absolute;
+	display:inline-block;
+	top:0%;
+	left:50%;
+	transform:translateX(-50%);
+	width:1px;
+	height:50px;
+	background:#888;
+}
+@keyframes tap{
+	0%{transform:rotate(0deg);}
+	30%{transform:rotate(30deg);}
+	50%{transform:rotate(0deg);}
+}
+@keyframes tip{
+	0%{transform:rotate(0deg);}
+	30%{transform:rotate(-30deg);}
+	50%{transform:rotate(0deg);}
+}
+.bctn .p .b{
+	display:block;
+	position:absolute;
+	width:20px;
+	height:20px;
+	bottom:30px;
+	border-radius:50%;
+	background:radial-gradient(at 75% 25%, #bcd, #111);
 }
