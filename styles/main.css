@@ -686,6 +686,7 @@ p{
 	content:"!";
 	position:absolute;
 	line-height:25px;
+	color:var(--alrtcol);
 	font-size:.8rem;
 	font-weight:bold;
 	top:50%;
