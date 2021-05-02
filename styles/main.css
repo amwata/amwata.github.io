@@ -226,7 +226,7 @@ section{
     text-align:right;
 	line-height:0;
 	font-weight:bold;
-	font-size:.8rem;
+	font-size:.85rem;
 	transform:translateX(-100%);
 	transition:transform .7s .4s ease;
 }
