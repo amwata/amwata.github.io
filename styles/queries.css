@@ -133,6 +133,9 @@
 	header .hdview .active .mnb2{
 		transform:scaleX(0);
 	}
+	header .hdview .hdlgctn .hdlg .logo{
+                font-size:2.2rem;
+	
 	.logo{
 		font-size:2.8rem;
 	}
@@ -243,6 +246,7 @@
 	--wtcol:#fff;
 	--wtcol2:#def;
 	--dkcol:#000;
+	--hmhcol:#008090;
 	--btnhv:rgba(112, 128, 144, .3);
 	--mobnavbg:#323247;
 	--hmbg:#121519;
