@@ -165,7 +165,7 @@ window.onload = () =>{
 			alrt.innerHTML = `<p>Sending message...</p>`
 			alrt.classList.add("alrtop")
 			if (navigator.onLine) {
-				fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+				fetch(scriptURL, { method: 'POST', mode:'no-cors', body: new FormData(form)})
 				.then(response => console.log('Success!', response)).then(() => new Promise((resolve) => setTimeout(resolve, 3000)).then(() => {
 					alrt.innerHTML = `<span class="sc"></span><p>Message sent</p>`
 					hidEl(alrt, "alrtop")
