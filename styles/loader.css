@@ -1,4 +1,3 @@
-
 .loader{
     position:fixed;
     top:0;
@@ -14,11 +13,36 @@
 }
 
 .loader div h1{
-    font-weight:400;
-    font-size:5.5em;
+    font-weight:350;
+    font-size:5.7em;
     text-align:center;
     font-family:Arial;
-    background:var(--sigcol);
-    color:transparent;
-    -webkit-background-clip:text;
+    user-select:none;
+}
+.loader div h1 span{
+	position:relative;
+	background:var(--sigcol);
+	color:transparent;
+	-webkit-background-clip:text;
+}
+.loader span .ray2{
+	position:absolute;
+	width:100%;
+	left:0;
+	top:0;
+	height:100%;
+	background:linear-gradient(60deg, transparent, transparent, #a0e8f3, transparent, transparent) no-repeat;
+	color:transparent;
+	-webkit-background-clip:text;
+	background-position:-100px 0;
+	transition:background 2.5s .8s ease;
+	animation:ldray 2s infinite ease;
+}
+@keyframes ldray{
+	0%{
+		background-position:-100px 0;
+	}
+	100%{
+		background-position:100px 0;
+	}
 }
