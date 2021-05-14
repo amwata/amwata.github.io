@@ -731,8 +731,8 @@ p{
     left:0;
     pointer-events:none;
     color:var(--txtcol2);
-    font-size:.95rem;
-    transition:.5s ease;
+    font-size:1rem;
+    transition:all .3s ease;
 }
 .contact .ctcinput .ctcform .txt input:focus,
 .contact .ctcinput .ctcform .txt textarea:focus,
@@ -744,7 +744,6 @@ p{
 {
     border-bottom:1px solid var(--primcol);
     color:var(--txtcol);
-    transition:.5s ease;
 }
 .contact .ctcinput .ctcform .txt input:focus ~label,
 .contact .ctcinput .ctcform .txt textarea:focus ~ label,
@@ -753,11 +752,10 @@ p{
 .contact .ctcinput .ctcform .txt input:hover ~ label,
 .contact .ctcinput .ctcform .txt textarea:hover ~ label
 {
-    font-size:0.8rem;
+    font-size:0.9rem;
     color:var(--primcol);
     font-weight:400;
     transform:translateY(-1.25rem);
-    transition:.5s ease;
 }
 
 .form .mail{
