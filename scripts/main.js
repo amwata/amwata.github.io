@@ -40,7 +40,15 @@ window.onload = () =>{
 	glpBx = document.querySelectorAll(".glpbx"),
 	glClose = document.querySelector(".glclose"),
 	skills = document.querySelector("#skills"),
-	svc = document.querySelector("#services")
+	svc = document.querySelector("#services"),
+	fields = Array.from(document.querySelectorAll(".blc"))
+	
+	const inValid = s => {
+		return !s.trim().length
+	}
+	const isBlank = fs => {
+		return fs.some(f => inValid(f.value))
+	}
 	
 	const endLoad = () => {
 		loader.style.display = "none"
@@ -164,7 +172,12 @@ window.onload = () =>{
 			e.preventDefault()
 			alrt.innerHTML = `<p>Sending message...</p>`
 			alrt.classList.add("alrtop")
-			if (navigator.onLine) {
+			
+			if(isBlank(fields)){
+				alrt.innerHTML = `<span class="er"></span><p>Fields cannot be blank</p>`
+				hidEl(alrt, "alrtop")
+			}
+			else if (navigator.onLine) {
 				fetch(scriptURL, { method: 'POST', mode:'no-cors', body: new FormData(form)})
 				.then(response => console.log('Success!', response)).then(() => new Promise((resolve) => setTimeout(resolve, 3000)).then(() => {
 					alrt.innerHTML = `<span class="sc"></span><p>Message sent</p>`
