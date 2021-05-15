@@ -457,10 +457,6 @@ p{
 	background:var(--btnhv);
 	color:var(--txtcol);
 }
-#skills{
-    width:100%;
-    bottom:;
-}
 .skillsview{
     width:90%;
     display:flex;
