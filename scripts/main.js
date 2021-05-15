@@ -76,7 +76,7 @@ window.onload = () =>{
 				const el = document.querySelector(e.target.getAttribute("href"))
 			 	let offTop
 			 	if(el == svc || el == skills){
-			 		offTop = el.offsetParent.offsetTop + el.offsetTop
+			 		offTop = el.offsetParent.offsetParent.offsetTop + el.offsetTop
 			 	}else offTop = el.offsetTop
 			 	
 				e.preventDefault()
@@ -100,7 +100,7 @@ window.onload = () =>{
 				const el = document.querySelector(e.target.getAttribute("href"))
 				let offsetTop
 				if(el == svc || el == skills){
-					offsetTop = el.offsetParent.offsetTop
+					offsetTop = el.offsetParent.offsetParent.offsetTop
 				}else offsetTop = el.offsetTop
 				
 				e.preventDefault()
