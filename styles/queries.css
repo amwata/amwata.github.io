@@ -162,10 +162,10 @@
 	.profp .ref{
 		float:none;
 	}
-	#svkil{
+	#svkil .maxwid{
 		flex-direction:column;
 	}
-	#svkil .maxwid{
+	#skills, #services{
 		width:100%;
 	}
 	.svc .viewactive{
