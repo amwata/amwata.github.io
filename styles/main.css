@@ -164,7 +164,7 @@ section{
 	background:url(../imgs/bgd.png) no-repeat;
 	background-size:100%;
 	display:flex;
-	flex-direction:center;
+	justify-content:center;
 }
 .hmdiv{
 	min-height:100vh;
