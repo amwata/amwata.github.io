@@ -165,10 +165,12 @@
 	#svkil .maxwid{
 		flex-direction:column;
 	}
+
 	#skills, #services{
 		margin:0;
 		width:100%;
 	}
+
 	.svc .viewactive{
 		flex-direction:column;
 		text-align:center;
