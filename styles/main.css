@@ -380,12 +380,11 @@ p{
 	align-items:flex-start;
 	justify-content:center;
 }
-
-#services, #skills{
-	width:50%;
-}
 #services{
 	margin-right:40px;
+}
+#services, #skills{
+	width:50%;
 }
 .svc{
 	display:flex;
