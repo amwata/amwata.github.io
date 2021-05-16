@@ -384,6 +384,9 @@ p{
 #services, #skills{
 	width:50%;
 }
+#services{
+	margin-right:40px;
+}
 .svc{
 	display:flex;
 	flex-wrap:wrap;
