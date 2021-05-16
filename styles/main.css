@@ -380,6 +380,9 @@ p{
 	align-items:flex-start;
 	justify-content:center;
 }
+#services{
+	margin-right:40px;
+}
 #services, #skills{
 	width:50%;
 }
