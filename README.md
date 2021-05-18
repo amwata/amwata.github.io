@@ -2,7 +2,7 @@
 
 # web portfolio
 
-<img alt="profile" src="https://github.com/amwata/amwata.github.io/blob/master/imgs/sigma.png">
-<img alt="profile" src="https://github.com/amwata/amwata.github.io/blob/master/imgs/.png">
+<img alt="profile" src="https://github.com/amwata/amwata.github.io/blob/master/imgs/sigma.png" style="width:40px;">
+<img alt="profile" src="https://github.com/amwata/amwata.github.io/blob/master/imgs/bg1.png">
 
 # https://amwata.github.io
