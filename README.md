@@ -3,5 +3,6 @@
 # web portfolio
 
 <img alt="profile" src="https://github.com/amwata/amwata.github.io/blob/master/imgs/sigma.png">
+<img alt="profile" src="https://github.com/amwata/amwata.github.io/blob/master/imgs/.png">
 
 # https://amwata.github.io
