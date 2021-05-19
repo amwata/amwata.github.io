@@ -179,11 +179,11 @@ window.onload = () =>{
 			}
 			else if (navigator.onLine) {
 				fetch(scriptURL, { method: 'POST', mode:'no-cors', body: new FormData(form)})
-				.then(response => console.log('Success!', response)).then(() => new Promise((resolve) => setTimeout(resolve, 3000)).then(() => {
+				.then(response => console.log('Success!', response)).then(() => {
 					alrt.innerHTML = `<span class="sc"></span><p>Message sent</p>`
-					hidEl(alrt, "alrtop")
 					form.reset()
-				}))
+					hidEl(alrt, "alrtop")
+				})
 				.catch((e) => {
 					alrt.innerHTML = `<span class="er"></span><p>Try Again</p>`
 					hidEl(alrt, "alrtop")
