@@ -844,7 +844,7 @@ footer .foot .ftinfo .ftctc .fticons{
 	width:30px;
 	height:100%;
 	display:inline-block;
-	margin:0 10px;
+	margin:0 30px;
 	opacity:.5;
 	filter:grayscale(90%);
 	transition:all .2s ease;
