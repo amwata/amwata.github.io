@@ -197,7 +197,7 @@ section{
 }
 .logo{
 	font-family:Arial;
-	font-weight:500;
+	font-weight:200;
 	font-size:4rem;
 	color:var(--txtcol);
 	user-select:none;
