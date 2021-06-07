@@ -807,6 +807,7 @@ footer .foot .ftlogoc {
 footer .foot .ftlogoc .ftlogo {
 	position:relative;
 	overflow:hidden;
+	opacity:.5;
 }
 footer .foot .ftinfo{
 	display:flex;
