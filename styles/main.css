@@ -41,7 +41,8 @@
  	--sccol3:rgba(20, 250, 50, .5);
  	--glmdlbg:rgba(0,0,16,.7);
  	--bdbgb:rgba(0,0,0,0);
- 	--sigcol:linear-gradient(60deg, #005853, #70b8c3, #307883);
+ 	--sigcol:linear-gradient(15deg, #005853, #70b8c3, #307883);
+	--sigcol1:linear-gradient(15deg, var(--txtcol3), var(--txtcol), var(--txtcol2));
  	--prjctshdcol:linear-gradient(rgb(81,102,126) 30%,rgb(224,240,255),rgb(81,102,126) 70% 100%);
  	--prjctsbgb:linear-gradient(90deg,rgba(0,49,82,.7),rgba(0,45,48,.3));
  	--prjctsbga:linear-gradient(90deg,rgba(0,45,48,.3),rgba(0,59,83,.7));
@@ -200,7 +201,9 @@ section{
 	font-family:Arial;
 	font-weight:400;
 	font-size:4rem;
-	color:var(--txtcol);
+	background:var(--sigcol1);
+	color:transparent;
+	-webkit-background-clip:text;
 	user-select:none;
 }
 	
@@ -214,14 +217,14 @@ section{
 }
 .hmlogo .logo span{
 	transform:rotate(180deg);
-	transition:transform .7s ease;
+	transition:transform .5s .3s ease;
 }
 .hmlogo .logo{
-	color:rgba(0, 0, 0, 0);
-	transition:color .7s .2s ease;
+	opacity:0;
+	transition:opacity .5s .2s ease;
 }
 .toview .hmlogo .logo{
-	color:var(--txtcol);
+	opacity:1;
 }
 	
 .toview .logo span{
