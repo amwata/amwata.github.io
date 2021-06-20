@@ -42,7 +42,7 @@
  	--glmdlbg:rgba(0,0,16,.7);
  	--bdbgb:rgba(0,0,0,0);
  	--sigcol:linear-gradient(15deg, #005853, #70b8c3, #307883);
-	--sigcol1:linear-gradient(15deg, var(--txtcol3), var(--wtcol), var(--txtcol2));
+	--sigcol1:linear-gradient(15deg, var(--txtcol3), var(--wtcol2), var(--txtcol2));
  	--prjctshdcol:linear-gradient(rgb(81,102,126) 30%,rgb(224,240,255),rgb(81,102,126) 70% 100%);
  	--prjctsbgb:linear-gradient(90deg,rgba(0,49,82,.7),rgba(0,45,48,.3));
  	--prjctsbga:linear-gradient(90deg,rgba(0,45,48,.3),rgba(0,59,83,.7));
