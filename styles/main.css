@@ -92,6 +92,7 @@ header .hdview{
 }
 header .hdview .hdlgctn .hdlg{
     opacity:1;
+    display:block;
 }
 .navbg header .hdview .hdlgctn .hdlg{
     opacity:0;
