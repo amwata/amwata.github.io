@@ -217,11 +217,11 @@ section{
 }
 .hmlogo .logo span{
 	transform:rotate(180deg);
-	transition:transform .5s .3s ease;
+	transition:transform .7s .3s ease;
 }
 .hmlogo .logo{
 	opacity:0;
-	transition:opacity .5s .2s ease;
+	transition:opacity .5s .3s ease;
 }
 .toview .hmlogo .logo{
 	opacity:1;
