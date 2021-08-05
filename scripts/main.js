@@ -364,4 +364,6 @@ window.onload = () =>{
 	randglBg()
 	createPhrase()
 	events()
+	
+	console.log(`                  .,,,,,,,,,,\n             ,;k0O#$00k000Oxc\n           :WNd'    ';MX;\n          ,0MM:        :WNd'\n          lWM:          :M0l\n          cNM:          :Mk:\n          .dNM:         :Kx;\n            ;kX:      :Kd'\n              ""-'cc-""'`)
 }
