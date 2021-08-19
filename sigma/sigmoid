@@ -1,1 +1,31 @@
 
+<!DOCTYPE html>
+<html>
+    <head>
+         <meta charset="UTF-8">
+        <title></title>
+        <style>
+        .d{
+            background:#ddd;
+            padding:10px;
+            width:80px;
+            height:80px;
+        }
+        .d img{
+            width:100%;
+            height:100%;
+            display:block;
+            object-fit:cover;
+        }
+        </style>
+    </head>
+    <body>
+      <div class="d">
+        <img src ="https://drive.google.com/uc?export=view&id=1O8mvag7YjUSB7XDKVI-AKhDVA5Hh2T5b" alt="&sigma;">
+      </div>
+    </body>
+</html>
+
+
+
+
