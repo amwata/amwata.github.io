@@ -31,7 +31,7 @@
 	left:0;
 	top:0;
 	height:100%;
-	background:linear-gradient(60deg, transparent, #a0e8f3, transparent) no-repeat;
+	background:linear-gradient(60deg, transparent, transparent, #a0e8f3, transparent, transparent) no-repeat;
 	color:transparent;
 	-webkit-background-clip:text;
 	background-position:-100px 0;
