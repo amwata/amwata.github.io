@@ -21,7 +21,7 @@ window.onload = () =>{
 	hdlinks = document.querySelectorAll(".dsktop .hdmn .li a"),
 	mobLinks = document.querySelectorAll(".mobile .hdmn .li a"),
 	lists = document.querySelectorAll("header nav .hdmn .li"),
-	mobNav = document.querySelector(".mobile"),
+	mobNav = document.querySelector("#mobile"),
 	mark = document.querySelector("#sklmarker"),
 	sklsView = document.querySelector(".skillsview"),
 	spans = document.querySelectorAll(".skills span"),
@@ -64,11 +64,13 @@ window.onload = () =>{
 	const events = () => {
 		hdClose.addEventListener("click",(e)=>{
 			hdClose.classList.toggle("active")
-			mobNav.classList.toggle("activea")
 			document.body.classList.toggle("blur")
 			if(!glMdl.classList.contains("glmdlv")){
 				toggleBodyscroll()
 			}
+			if(mobNav.classList.contains("activea")){
+			   mobNav.classList.replace("activea", "mobile")
+			}else mobNav.classList.replace("mobile", "activea")
 		})
 		
 		mobLinks.forEach(li =>{
@@ -85,7 +87,7 @@ window.onload = () =>{
 				glMdl.classList.remove("glmdlv")
 				if(offTop != null){
 					hdClose.classList.remove("active")
-					mobNav.classList.remove("activea")
+					mobNav.classList.replace("activea", "mobile")
 					document.body.classList.remove("blur")
 					setTimeout(()=>{ 
 						window.scrollTo({ top: offTop, behavior: "smooth" })
@@ -109,7 +111,7 @@ window.onload = () =>{
 				glMdl.classList.remove("glmdlv")
 				if(offsetTop != null){
 					hdClose.classList.remove("active")
-					mobNav.classList.remove("activea")
+					mobNav.classList.replace("activea", "mobile")
 					document.body.classList.remove("blur")
 					setTimeout(()=>{ 
 						window.scrollTo({ top: offsetTop, behavior: "smooth" })
@@ -150,7 +152,7 @@ window.onload = () =>{
 			}
 			if(e.target == mobNav ){
 				hdClose.classList.remove("active")
-				mobNav.classList.remove("activea")
+				mobNav.classList.replace("activea", "mobile")
 				document.body.classList.remove("blur")
 				if(!glMdl.classList.contains("glmdlv")){
 					addScroll()
@@ -232,8 +234,8 @@ window.onload = () =>{
 		
 		views.forEach(view=>{
 			if(isInView(view, 20)){
-				view.classList.add("toview")
-			}else{view.classList.remove("toview")}
+				view.classList.replace("inview", "toview")
+			}else{view.classList.replace("toview", "inview")}
  		})
  		if(isInView(hmview, 50, false)){
  			hmview.classList.add("toview")
@@ -318,6 +320,7 @@ window.onload = () =>{
 			skills.set("NodeJs", 70)
 			skills.set("JavaScript", 90)
 			skills.set("Core Python", 85)
+			skills.set("React", 80)
 			skills.set("HTML & CSS", 85)
 			skills.set("SQL", 75)
 			skills.set("WordPress", 75)
