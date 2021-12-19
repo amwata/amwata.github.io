@@ -332,10 +332,11 @@ p{
  color:var(--txtcol1);
 }
 
-.inview .prof{
+.inview .prof,
+.toview .prof{
     display:flex;
     align-items:center;
-	justify-content:space-around;
+    justify-content:space-around;
 }
 
 .prof .dp{
