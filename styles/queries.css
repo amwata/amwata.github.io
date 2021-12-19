@@ -107,7 +107,6 @@
 		display:block;
 		color:var(--txtcol);
 		text-align:left;
-		opacity:0;
 		transform:translateX(-20px);
 		transition:all .4s calc(0.1s * var(--mi)) ease;
 	}
