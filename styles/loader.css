@@ -1,48 +1,36 @@
 .loader{
-    position:fixed;
-    top:0;
-    left:0;
-    width:100vw;
-    height:100vh;
-    background:var(--dkcol);
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    z-index:1000;
-    transition:none;
+	position:fixed;
+	width:100vw;
+	height:100vh;
+	display:flex;
+	align-items:center;
+	justify-content:center;
+	background:#fff;
+	z-index:1000;
 }
 
-.loader div h1{
-    font-weight:400;
-    font-size:5.6em;
-    text-align:center;
-    font-family:Arial;
-    user-select:none;
-}
-.loader div h1 span{
+.loader .loadctn{
 	position:relative;
-	background:var(--sigcol);
-	color:transparent;
-	-webkit-background-clip:text;
+	width:4rem;
 }
-.loader span .ray2{
-	position:absolute;
+.loader .loadctn svg{
+	position:relative;
 	width:100%;
-	left:0;
-	top:0;
-	height:100%;
-	background:linear-gradient(60deg, transparent, transparent, #a0e8f3, transparent, transparent) no-repeat;
-	color:transparent;
-	-webkit-background-clip:text;
-	background-position:-100px 0;
-	transition:background 2.5s .8s ease;
-	animation:ldray 2s infinite ease;
+	display:block;
 }
-@keyframes ldray{
+
+.loader .loadctn svg g{
+	animation: dim 2s linear;
+}
+	
+@keyframes dim{
 	0%{
-		background-position:-100px 0;
+		fill:#eee;
+	}
+	50%{
+		fill:#ccc;
 	}
 	100%{
-		background-position:100px 0;
+		fill:#27abab;
 	}
 }
