@@ -929,7 +929,9 @@ footer .foot .ftinfo .ftctc .fticons{
 	background-size:cover;
 	background-position:bottom;
 }
-				
+ .scrap{
+	background:url(../imgs/scrap.png) no-repeat;
+}				
  .potfo{
 	background:url(../imgs/shop.png) no-repeat;
 }
