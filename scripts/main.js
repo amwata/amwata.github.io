@@ -317,13 +317,13 @@ window.onload = () =>{
 	
 	let tecSkills =(id)=>{
 		let skills = new Map()
-			skills.set("NodeJs", 70)
-			skills.set("JavaScript", 90)
-			skills.set("Core Python", 85)
-			skills.set("React", 80)
-			skills.set("HTML & CSS", 85)
-			skills.set("SQL", 75)
-			skills.set("WordPress", 75)
+			skills.set("NodeJs", 100)
+			skills.set("JavaScript", 100)
+			skills.set("Core Python", 100)
+			skills.set("React", 100)
+			skills.set("HTML & CSS", 100)
+			skills.set("SQL", 100)
+			skills.set("WordPress", 100)
 	
 		for (let [k, v]of skills){
 				createEl(id, k, v)
@@ -349,11 +349,11 @@ window.onload = () =>{
 	
 	let perSkills = (id) =>{
 		let skills = new Map()
-			skills.set("Problem Solving", 85)
-			skills.set("TeamWork", 90)
-			skills.set("Communication", 90)
-			skills.set("Speed", 85)
-			skills.set("Self Motivation", 95)
+			skills.set("Problem Solving", 100)
+			skills.set("TeamWork", 100)
+			skills.set("Communication", 100)
+			skills.set("Speed", 100)
+			skills.set("Self Motivation", 100)
 	
 		for (let [k, v]of skills){
 			createEl(id, k, v)
