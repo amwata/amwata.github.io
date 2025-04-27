@@ -65,9 +65,9 @@ window.onload = () =>{
 		hdClose.addEventListener("click",(e)=>{
 			hdClose.classList.toggle("active")
 			document.body.classList.toggle("blur")
-			if(!glMdl.classList.contains("glmdlv")){
-				toggleBodyscroll()
-			}
+			// if(!glMdl.classList.contains("glmdlv")){
+			// 	toggleBodyscroll()
+			// }
 			if(mobNav.classList.contains("activea")){
 			   mobNav.classList.replace("activea", "mobile")
 			}else mobNav.classList.replace("mobile", "activea")
@@ -84,7 +84,7 @@ window.onload = () =>{
 				e.preventDefault()
 				mobMarker(li)
 				addScroll()
-				glMdl.classList.remove("glmdlv")
+				// glMdl.classList.remove("glmdlv")
 				if(offTop != null){
 					hdClose.classList.remove("active")
 					mobNav.classList.replace("activea", "mobile")
@@ -108,7 +108,7 @@ window.onload = () =>{
 				e.preventDefault()
 				hdMarker(li)
 				addScroll()
-				glMdl.classList.remove("glmdlv")
+				// glMdl.classList.remove("glmdlv")
 				if(offsetTop != null){
 					hdClose.classList.remove("active")
 					mobNav.classList.replace("activea", "mobile")
@@ -133,30 +133,30 @@ window.onload = () =>{
 			})
 		})
 		
-		glimgBxs.forEach(i=>{
-			i.addEventListener("click",()=>{
-			removeScroll()
-			glMdl.classList.add("glmdlv")
-			glimgPop.src = `${i.src}`
-			})
-		})
+		// glimgBxs.forEach(i=>{
+		// 	i.addEventListener("click",()=>{
+		// 	removeScroll()
+		// 	glMdl.classList.add("glmdlv")
+		// 	glimgPop.src = `${i.src}`
+		// 	})
+		// })
 	
-		glClose.addEventListener("click",(e)=>{
-			addScroll()
-			glMdl.classList.toggle("glmdlv")
-		})
+		// glClose.addEventListener("click",(e)=>{
+		// 	addScroll()
+		// 	glMdl.classList.toggle("glmdlv")
+		// })
 		window.addEventListener("click",(e)=>{
-			if( e.target == glMdl){
-				addScroll()
-				glMdl.classList.remove("glmdlv")
-			}
+			// if( e.target == glMdl){
+			// 	addScroll()
+			// 	glMdl.classList.remove("glmdlv")
+			// }
 			if(e.target == mobNav ){
 				hdClose.classList.remove("active")
 				mobNav.classList.replace("activea", "mobile")
 				document.body.classList.remove("blur")
-				if(!glMdl.classList.contains("glmdlv")){
-					addScroll()
-				}
+				// if(!glMdl.classList.contains("glmdlv")){
+				// 	addScroll()
+				// }
 			}
 		})
 		
