@@ -364,7 +364,7 @@ window.onload = () =>{
 	tecSkills(ctnTec)
 	perSkills(ctnPer)
    	slidView()
-	randglBg()
+	//randglBg()
 	createPhrase()
 	events()
 	
