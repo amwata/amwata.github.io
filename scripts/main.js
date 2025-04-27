@@ -365,7 +365,7 @@ window.onload = () =>{
 	perSkills(ctnPer)
    	slidView()
 	//randglBg()
-	createPhrase()
+	//createPhrase()
 	events()
 	
 	console.log(`                  .,,,,,,,,,,\n             ,;k0O#$00k000Oxc\n           :WNd'    ';MX;\n          ,0MM:        :WNd'\n          lWM:          :M0l\n          cNM:          :Mk:\n          .dNM:         :Kx;\n            ;kX:      :Kd'\n              ""-'cc-""'`)
